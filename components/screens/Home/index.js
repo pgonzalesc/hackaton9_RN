@@ -1,31 +1,42 @@
 import React from 'react';
-import { StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import SrcHome from '../../source/Home';
+import SrcCuenta from '../../source/Cuenta';
+
+const Stack = createStackNavigator();
 
 const Home = ()=> {
     return (
-        <View style={styles.container}>
-            <View>
-              <Text style={styles.textHeader}>Bienvenido</Text>
-            </View>
-            <View style={styles.ingreso}>
-                <Text style={styles.textIngreso}>Ingresos</Text>
-                <Text style={styles.numberIngreso}>S/.200.00</Text>
-            </View>
-            <View style={styles.gasto}>
-                <Text style={styles.textGasto}>Gastos</Text>
-                <Text style={styles.numberGasto}>S/.100.00</Text>
-            </View>
-            <View style={styles.cuentas}>
-                <View style={styles.titleCuenta}>
-                    <Text style={styles.textCuenta}>CUENTAS</Text>
-                </View>
-                <View style={styles.containerVerCuenta}>
-                    <Text style={styles.textVerCuenta}>Ver Cuenta</Text>
-                    <Text style={styles.numberVerCuenta}>S/.200.00</Text>
-                </View>
-            </View>
-        </View>
-        
+        // <View style={styles.container}>
+        //     <View>
+        //       <Text style={styles.textHeader}>Bienvenido</Text>
+        //     </View>
+        //     <View style={styles.ingreso}>
+        //         <Text style={styles.textIngreso}>Ingresos</Text>
+        //         <Text style={styles.numberIngreso}>S/.200.00</Text>
+        //     </View>
+        //     <View style={styles.gasto}>
+        //         <Text style={styles.textGasto}>Gastos</Text>
+        //         <Text style={styles.numberGasto}>S/.100.00</Text>
+        //     </View>
+        //     <View style={styles.cuentas}>
+        //         <View style={styles.titleCuenta}>
+        //             <Text style={styles.textCuenta}>CUENTAS</Text>
+        //         </View>
+        //         <View style={styles.containerVerCuenta}>
+        //             <TouchableOpacity onPress={()=>navigation.navigate('Mis Finanzas')}>
+        //                 <Text style={styles.textVerCuenta}>Ver Cuenta</Text>
+        //             </TouchableOpacity>
+                    
+        //             <Text style={styles.numberVerCuenta}>S/.200.00</Text>
+        //         </View>
+        //     </View>
+        // </View>
+        <Stack.Navigator>
+            <Stack.Screen name="Inicio" component={SrcHome}/>
+            <Stack.Screen name="Cuenta" component={SrcCuenta}/>
+        </Stack.Navigator>
     )
 }
 
@@ -63,6 +74,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 10,
     marginHorizontal: 20,
+    borderBottomWidth: 10,
+    borderColor: '#389AE0',
   },
   textGasto: {
       marginRight: 10,

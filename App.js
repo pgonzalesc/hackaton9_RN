@@ -38,17 +38,14 @@ const App = () => {
           name="Inicio" 
           component={HomeScreen} 
         />
-        <Tab.Screen name="Mis Finanzas" component={SettingsScreen} />
+        <Tab.Screen name="Finanzas" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
 };
 
 const styles = StyleSheet.create({
-  textTab:{
-    fontSize: 40,
-    fontWeight: 'bold',
-  }
+
 });
 
 export default App;
