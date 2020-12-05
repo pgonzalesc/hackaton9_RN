@@ -1,16 +1,16 @@
 import React from 'react';
 import { } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SrcCuenta from '../../source/Cuenta';
+import SrcDetalleCuenta from '../../source/DetalleCuenta';
 
 const Stack = createStackNavigator();
 
-const Cuenta = ()=>{
+const DetalleCuenta = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Cuenta" component={SrcCuenta}/>
+            <Stack.Screen name="Detalle Cuenta" component={SrcDetalleCuenta}/>
         </Stack.Navigator>
     )
 }
 
-export default Cuenta;
+export default DetalleCuenta;

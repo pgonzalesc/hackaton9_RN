@@ -4,15 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home  from './components/screens/Home';
 import Finance from './components/screens/Finance';
-// import Icon from 'react-native-vector-icons/dist/FontAwesome';
-// import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-function HomeScreen() {
-  return (
-    <Home />
-  );
-}
+import Operacion from './components/screens/Operacion';
 
 function SettingsScreen() {
   return (
@@ -34,10 +26,8 @@ const App = () => {
           inactiveBackgroundColor: '#e1e1e1'
         }}
       >
-        <Tab.Screen 
-          name="Inicio" 
-          component={HomeScreen} 
-        />
+        <Tab.Screen name="Inicio" component={Home} />
+        <Tab.Screen name="Operaciones" component={Operacion} />
         <Tab.Screen name="Finanzas" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
